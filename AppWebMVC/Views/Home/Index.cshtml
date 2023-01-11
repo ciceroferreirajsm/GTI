@@ -1,0 +1,82 @@
+﻿@model IEnumerable<AppWebMVC.Models.DadosPessoais>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de clientes</h1>
+
+<p>
+    <a asp-action="CriarDados">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosCliente.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosCliente.CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosCliente.RG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosCliente.DataExpedicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnderecoCliente.CEP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnderecoCliente.Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnderecoCliente.Logradouro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnderecoCliente.Bairro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnderecoCliente.UF)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DadosCliente.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DadosCliente.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DadosCliente.RG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DadosCliente.DataExpedicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnderecoCliente.CEP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnderecoCliente.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnderecoCliente.Logradouro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnderecoCliente.Bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnderecoCliente.UF)
+            </td>
+            <td>
+                <a asp-controller="Home" asp-action="AtualizarDados" asp-route-CPF="@item.DadosCliente.CPF" asp-route-CEP="@item.EnderecoCliente.CEP">Atualizar</a> |
+                @Html.ActionLink("Deletar", "DeletarDados", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,169 @@
+﻿@model AppWebMVC.Models.DadosPessoais
+
+@{
+    ViewData["Title"] = "AtualizarDados";
+}
+
+<h1>AtualizarDados</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <h4>Cliente</h4>
+        <form asp-action="AtualizarDados" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.Nome" class="control-label"></label>
+                <input asp-for="@Model.DadosCliente.Nome" class="form-control" />
+                <span asp-validation-for="@Model.DadosCliente.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.CPF" class="control-label"></label>
+                <input asp-for="@Model.DadosCliente.CPF" class="form-control" />
+                <span asp-validation-for="@Model.DadosCliente.CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.RG" class="control-label"></label>
+                <input asp-for="@Model.DadosCliente.RG" class="form-control" />
+                <span asp-validation-for="@Model.DadosCliente.RG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.DataExpedicao" class="control-label"></label>
+                <input asp-for="@Model.DadosCliente.DataExpedicao" class="form-control" />
+                <span asp-validation-for="@Model.DadosCliente.DataExpedicao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.OrgaoExpeditor" class="control-label"></label>
+                <input asp-for="@Model.DadosCliente.OrgaoExpeditor" class="form-control" />
+                <span asp-validation-for="@Model.DadosCliente.OrgaoExpeditor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.UF" class="control-label"></label>
+                <select class="text-danger">
+                    <option value="">Todos</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="AC">Acre</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="RR">Roraima</option>
+                    <option value="PA">Pará</option>
+                    <option value="AP">Amapá</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PI">Piauí</option>
+                    <option value="CE">Ceará</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="BA">Bahia</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="GO">Goiás</option>
+                    <option value="DF">Distrito Federal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.DataNascimento" class="control-label"></label>
+                <input asp-for="@Model.DadosCliente.DataNascimento" class="form-control" />
+                <span asp-validation-for="@Model.DadosCliente.DataNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.Sexo" class="control-label"></label>
+                <select class="text-danger">
+                    <option value="M">Masculino</option>
+                    <option value="S">Feminino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DadosCliente.EstadoCivil" class="control-label"></label>
+                <input asp-for="@Model.DadosCliente.EstadoCivil" class="form-control" />
+                <span asp-validation-for="@Model.DadosCliente.EstadoCivil" class="text-danger"></span>
+            </div>
+            <h4>Endereco</h4>
+            <div class="form-group">
+                <label asp-for="@Model.EnderecoCliente.UF" class="control-label"></label>
+                <select class="text-danger">
+                    <option value="">Todos</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="AC">Acre</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="RR">Roraima</option>
+                    <option value="PA">Pará</option>
+                    <option value="AP">Amapá</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PI">Piauí</option>
+                    <option value="CE">Ceará</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="BA">Bahia</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="GO">Goiás</option>
+                    <option value="DF">Distrito Federal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.EnderecoCliente.Bairro" class="control-label"></label>
+                <input asp-for="@Model.EnderecoCliente.Bairro" class="form-control" />
+                <span asp-validation-for="@Model.EnderecoCliente.Bairro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.EnderecoCliente.CEP" class="control-label"></label>
+                <input asp-for="@Model.EnderecoCliente.CEP" class="form-control" />
+                <span asp-validation-for="@Model.EnderecoCliente.CEP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.EnderecoCliente.Cidade" class="control-label"></label>
+                <input asp-for="@Model.EnderecoCliente.Cidade" class="form-control" />
+                <span asp-validation-for="@Model.EnderecoCliente.Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.EnderecoCliente.Complemento" class="control-label"></label>
+                <input asp-for="@Model.EnderecoCliente.Complemento" class="form-control" />
+                <span asp-validation-for="@Model.EnderecoCliente.Complemento" class="text-danger"></span>
+                <div class="form-group">
+                    <label asp-for="@Model.EnderecoCliente.Logradouro" class="control-label"></label>
+                    <input asp-for="@Model.EnderecoCliente.Logradouro" class="form-control" />
+                    <span asp-validation-for="@Model.EnderecoCliente.Logradouro" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.EnderecoCliente.Numero" class="control-label"></label>
+                    <input asp-for="@Model.EnderecoCliente.Numero" class="form-control" />
+                    <span asp-validation-for="@Model.EnderecoCliente.Numero" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar a lista</a>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
