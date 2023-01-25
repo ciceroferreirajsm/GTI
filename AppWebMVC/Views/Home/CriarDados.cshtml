@@ -23,21 +23,21 @@
             </div>
             <div class="form-group">
                 <label asp-for="@Model.DadosCliente.RG" class="control-label"></label>
-                <input asp-for="@Model.DadosCliente.RG" class="form-control" />
+                <input asp-for="@Model.DadosCliente.RG" required class="form-control" />
                 <span asp-validation-for="@Model.DadosCliente.RG" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.DadosCliente.DataExpedicao" class="control-label"></label>
-                <input asp-for="@Model.DadosCliente.DataExpedicao" class="form-control" />
+                <input asp-for="@Model.DadosCliente.DataExpedicao" required class="form-control" />
                 <span asp-validation-for="@Model.DadosCliente.DataExpedicao" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.DadosCliente.OrgaoExpeditor" class="control-label"></label>
-                <input asp-for="@Model.DadosCliente.OrgaoExpeditor" class="form-control" />
+                <input asp-for="@Model.DadosCliente.OrgaoExpeditor" required class="form-control" />
                 <span asp-validation-for="@Model.DadosCliente.OrgaoExpeditor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="@Model.DadosCliente.UF" class="control-label"></label>
+                <label required asp-for="@Model.DadosCliente.UF" class="control-label"></label>
                 <select class="text-danger">
                     <option value="">Todos</option>
                     <option value="RO">Rondônia</option>
@@ -75,7 +75,7 @@
                 <span asp-validation-for="@Model.DadosCliente.DataNascimento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="@Model.DadosCliente.Sexo" class="control-label"></label>
+                <label required asp-for="@Model.DadosCliente.Sexo" class="control-label"></label>
                 <select class="text-danger">
                     <option value="M">Masculino</option>
                     <option value="S">Feminino</option>
@@ -88,7 +88,7 @@
             </div>
             <h4>Endereco</h4>
             <div class="form-group">
-                <label asp-for="@Model.EnderecoCliente.UF" class="control-label"></label>
+                <label asp-for="@Model.EnderecoCliente.UF" required class="control-label"></label>
                 <select class="text-danger">
                     <option value="">Todos</option>
                     <option value="RO">Rondônia</option>

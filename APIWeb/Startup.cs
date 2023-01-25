@@ -28,7 +28,7 @@ namespace APIWeb
             services.AddTransient<IDadosPessoaisService, DadosPessoaisService>();
             services.AddTransient<IDadosPessoaisRepository, DadosPessoaisRepository>();
 
-            services.AddDbContext<ApiWebContext>(opt => opt.UseInMemoryDatabase("ApiWeb"));
+            services.AddDbContext<ApiWebContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ApiWebContext")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
